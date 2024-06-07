@@ -1,4 +1,37 @@
+html {
+    font-size: 18px;
+    height: 100%;
+}
+
+header {
+    background-color: black;
+    color:white; 
+}
+
 body {
     font-family: "Maven Pro", sans-serif;
-    font-size: 18px;
+    background-image: url(./desk.jpg); 
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+#wordSection {
+    display:grid;
+    place-items: center;
+    height: 90vh;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeInAnimation 1.8s ease-in-out forwards; 
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
