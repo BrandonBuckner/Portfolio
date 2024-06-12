@@ -1,6 +1,7 @@
 html {
-    font-size: 18px;
-    height: 100%;
+    font-size: 20px;
+    height: 100vh;
+    background-color: #212529;
 }
 
 header {
@@ -10,21 +11,30 @@ header {
 
 body {
     font-family: "Maven Pro", sans-serif;
+}
+
+#homepage {
     background-image: url(./desk.jpg); 
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+    overflow: hidden;
+    height: 100vh;
 }
 
 #wordSection {
     display:grid;
     place-items: center;
-    height: 90vh;
+    height: 80vh;
+}
+
+#aboutPage {
+    color: whitesmoke;
 }
 
 .fade-in {
     opacity: 0;
-    animation: fadeInAnimation 1.8s ease-in-out forwards; 
+    animation: fadeInAnimation 1.3s ease-in-out forwards; 
 }
 
 @keyframes fadeInAnimation {
@@ -34,4 +44,29 @@ body {
     to {
         opacity: 1;
     }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0);
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.animatedFadeInUp {
+    opacity: 0
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
 }
